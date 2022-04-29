@@ -1,4 +1,11 @@
-import {init, size, READ, olg} from './common.js'
+import {init, size, olg} from './common.js'
+
+const READ = {
+	t1: 2.5,
+	t1b: 2.5,
+	t2: 3
+}
+
 
 function intro_O(){
 	const tl = init()
@@ -65,7 +72,7 @@ function horizontal(duration=.3){
 	tl.from(".proline", {scale:1, duration:.25, opacity:0, ease:'back.out'}, "+=.2")
 	tl.to(".proline", {duration:.25, opacity:0}, "+=1")
 	
-	console.log(HEIGHT);
+	
 	
 
 	tl.add("t1-in", "+=.2")
@@ -77,7 +84,7 @@ function horizontal(duration=.3){
 	tl.to(".t1b", {duration, opacity:0, y:`+=${HEIGHT}`}, "t1-out")
 
 
-	tl.add("t2-in", "+=.2")
+	tl.add("t2-in")
 	tl.from(".t2a", {duration, opacity:0, y:`-=${HEIGHT}`}, "t2-in")	
 	tl.from(".t2b", {duration, opacity:0, y:`+=${HEIGHT}`}, "t2-in")	
 
@@ -93,7 +100,7 @@ function horizontal(duration=.3){
 
 
 	tl.from(".t2", {duration:.25, opacity:0}, "+=.2")
-	tl.to(".t2", {duration:.25, opacity:0}, `+=3`)
+	tl.to(".t2", {duration:.25, opacity:0}, `+=${READ.t2}`)
 
 	tl.from(".proline-end", {duration:.25, opacity:0}, "+=.1")
 	tl.from(".cta", {duration:.25, opacity:0}, "+=.3")

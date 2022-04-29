@@ -11,12 +11,6 @@ const READ = {
 	t2: 3
 }
 
-const SECOND = {
-	t1: 10,
-	t2: 2
-}
-
-
 
 const {w, h} = size
 
@@ -56,65 +50,6 @@ function olg(){
     return tl
 }
 
-function bb_a(){
-	const tl = init()
-	tl.from(".o", {duration:.3, scale:1, ease:'back.out', opacity:0}, "+=.2")
-	tl.add("proline", "+=.4")
-	tl.from(".o-shadow", {duration:.1, opacity:0}, "proline")
-	tl.from(".proline", {scale:1, duration:.25, opacity:0, ease:'back.out'}, "proline")
-
-	tl.to(".proline", {duration:.2, opacity:0}, "+=1")
-
-	tl.add("t1-in")
-	tl.from(".t1a", {x:`-${size.w}`, duration:.2}, "t1-in")
-	tl.from(".t1b", {x:size.w, duration:.2}, "t1-in")
-
-	tl.add("t1-out", `+=${SECOND.t1}`)
-	tl.to(".t1a", {x:`-${size.w}`, duration:.3}, "t1-out")
-	tl.to(".t1b", {x:size.w, duration:.3}, "t1-out")
-
-
-	return tl
-}
-
-
-function bbSecond(){
-	const tl = bb_a()
-	tl.to([".o-shadow", ".proline", ".o"], {duration:.1, opacity:0}, "+=.1")
-	tl.from(".bring",  {duration:.25, x:"-=100", opacity:0})
-	tl.add(chev())
-	return tl
-
-
-	
-}
-
-
-function bb(){
-	const tl = bb_a()	
-	tl.to([".o-shadow", ".proline", ".o"], {duration:.1, opacity:0}, "f1-out")
-	tl.from(".bring",  {duration:.25, x:"-=100", opacity:0})
-	tl.add(chev())
-	return tl
-}
-
-
-function bb2(){
-	const tl = init()
-	
-	tl.from(".t2",  {duration:.3, opacity:0}, "+=.5")
-	tl.to(".t2",  {duration:.3, opacity:0}, `+=3`)
-
-
-	tl.add("cta", "+=.2")
-
-	tl.from(".cta",  {duration:.3, opacity:0}, "cta")
-
-	tl.add("end", "+=.3")
-	tl.add(olg(), "end")
-	tl.from(".footer",  {duration:.5, opacity:0}, "end")
-	return tl
-}
 
 function chev(){
 	const tl = new TimelineMax()
@@ -154,90 +89,5 @@ function init(){
 
 
 
-function HOR(){
-	// import {init, olg, size, chev, bb, bb2, READ} from '../../_common/js/common.js'
 
-
-
-
-	TweenLite.set([".bring" ], {
-		transformOrigin:`${size.w}px ${size.h}px`,
-		x: -size.w/2,
-		y: -size.h/2,
-		scale: .5
-	})
-
-	const tl = init()
-	
-	const HEIGHT = size.h*.7
-
-	tl.from(".o",  {duration:.3, opacity:0}, "+=.2")
-	tl.from(".proline", {scale:1, duration:.25, opacity:0, ease:'back.out'}, "+=.2")
-	tl.to(".proline", {duration:.25, opacity:0}, "+=1")
-	
-
-	tl.add("t1-in", "+=.2")
-	tl.from(".t1a", {duration:.2, opacity:0, y:`-=${HEIGHT}`}, "t1-in")	
-
-	tl.add("t1-out", `+=${READ.t1}`)
-	tl.to(".t1a", {duration:.2, opacity:0, y:`+=${HEIGHT}`}, "t1-out")
-
-
-	tl.add("t2-in", "+=.2")
-	tl.from(".t1b", {duration:.2, opacity:0, y:`-=${HEIGHT}`}, "t2-in")	
-
-	tl.add("t2-out", `+=${READ.t2}`)
-	tl.to(".t1b", {duration:.2, opacity:0, y:`+=${HEIGHT}`}, "t2-out")
-	
-
-
-
-	tl.from(".bring", {scale:1, duration:.25, opacity:0, ease:'back.out'}, "+=.2")
-	tl.to(".bring", {duration:.25, opacity:0}, "+=1.3")
-
-
-	tl.from(".t2", {duration:.25, opacity:0}, "+=.2")
-	tl.to(".t2", {duration:.25, opacity:0}, `+=3`)
-
-	tl.from(".proline-end", {duration:.25, opacity:0}, "+=.1")
-	// tl.to(".proline-end", {duration:.25, opacity:0}, "+=.3")
-
-	tl.from(".cta", {duration:.25, opacity:0}, "+=.3")
-	
-	
-	tl.add("end", "+=.3")
-	tl.add(olg(), "end")
-	tl.from(".footer",  {duration:.5, opacity:0}, "end")
-
-
-
-
-
-}
-
-
-function cluserF(){
-	const tl = init()
-	tl.from(".o", {duration:.3, scale:1, ease:'back.out', opacity:0}, "+=.2")
-	tl.add("proline", "+=.4")
-	tl.from(".o-shadow", {duration:.1, opacity:0}, "proline")
-	tl.from(".proline", {scale:1, duration:.25, opacity:0, ease:'back.out'}, "proline")
-
-	tl.to(".proline", {duration:.2, opacity:0}, "+=1")
-
-	tl.add("t1-in")
-	tl.from(".t1a", {x:`-${size.w}`, duration:.2}, "t1-in")
-
-	tl.add("t2-in", "+=1")
-	tl.to(".t1a", {x:`${size.w}`, duration:.2}, "t2-in")	
-	tl.from(".t1b", {x:`-${size.w}`, duration:.2}, "t2-in")
-	tl.to(".t1b", {x:`${size.w}`, duration:.2}, "+=1")
-
-
-	return tl
-
-	
-
-}
-
-export {size, init, olg, chev, bb, bb2, READ, bbSecond, SECOND, HOR, cluserF, bb_a}
+export {size, init, olg, chev}

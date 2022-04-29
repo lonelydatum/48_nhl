@@ -1,7 +1,7 @@
 
 
 
-import {init, olg, size, chev, bbSecond, bb2, bb_a, READ} from '../../_common/js/common.js'
+import {chev} from '../../_common/js/common.js'
 import {intro_O, text1, end} from '../../_common/js/proline.js'
 
 
