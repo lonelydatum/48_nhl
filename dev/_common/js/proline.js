@@ -112,4 +112,4 @@ function horizontal(duration=.3){
 
 
 }
-export {intro_O, text1, end, horizontal}
+export {intro_O, text1, end, horizontal, READ}

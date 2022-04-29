@@ -188,6 +188,7 @@ exports.intro_O = intro_O;
 exports.text1 = text1;
 exports.end = end;
 exports.horizontal = horizontal;
+exports.READ = READ;
 
 },{"./common.js":2}]},{},[1])
 
