@@ -40,7 +40,7 @@ function horizontal() {
 	tl.to(".t2b", { duration: duration, opacity: 0, y: '+=' + HEIGHT }, "t2-out");
 
 	tl.from(".proline-end", { duration: .25, opacity: 0 }, "+=.1");
-	tl.to(".proline-end", { duration: .25, opacity: 0 }, "+=1");
+	tl.to(".proline-end", { duration: .25, opacity: 0 }, "+=1.2");
 
 	tl.from(".t2", { duration: .25, opacity: 0 }, "+=.2");
 	tl.to(".t2", { duration: .25, opacity: 0 }, '+=' + _commonJsProlineJs.READ.t2);

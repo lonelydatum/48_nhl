@@ -42,7 +42,7 @@ function horizontal(duration=.21){
 	tl.to(".t2b", {duration, opacity:0, y:`+=${HEIGHT}`}, "t2-out")
 	
 	tl.from(".proline-end", {duration:.25, opacity:0}, "+=.1")
-	tl.to(".proline-end", {duration:.25, opacity:0}, "+=1")
+	tl.to(".proline-end", {duration:.25, opacity:0}, "+=1.2")
 
 
 	tl.from(".t2", {duration:.25, opacity:0}, "+=.2")
