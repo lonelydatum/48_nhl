@@ -3,7 +3,7 @@
 
 var _commonJsProlineJs = require('../../_common/js/proline.js');
 
-(0, _commonJsProlineJs.horizontal)(.25);
+(0, _commonJsProlineJs.horizontal)(.17);
 
 module.exports = {};
 

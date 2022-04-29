@@ -1,6 +1,6 @@
 import {horizontal} from '../../_common/js/proline.js'
 
-horizontal(.25)
+horizontal(.17)
 
 module.exports = {};
 
