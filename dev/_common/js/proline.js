@@ -84,7 +84,7 @@ function horizontal(duration=.3){
 	tl.to(".t1b", {duration, opacity:0, y:`+=${HEIGHT}`}, "t1-out")
 
 
-	tl.add("t2-in")
+	tl.add("t2-in", "+=.1")
 	tl.from(".t2a", {duration, opacity:0, y:`-=${HEIGHT}`}, "t2-in")	
 	tl.from(".t2b", {duration, opacity:0, y:`+=${HEIGHT}`}, "t2-in")	
 

@@ -37,12 +37,6 @@ gsap.defaults({
 	ease: "power4.out"
 });
 
-var READ = {
-	t1: 2.5,
-	t1b: 2.5,
-	t2: 3
-};
-
 var w = size.w;
 var h = size.h;
 
@@ -186,7 +180,7 @@ function horizontal() {
 	tl.to(".t1a", { duration: duration, opacity: 0, y: '-=' + HEIGHT }, "t1-out");
 	tl.to(".t1b", { duration: duration, opacity: 0, y: '+=' + HEIGHT }, "t1-out");
 
-	tl.add("t2-in");
+	tl.add("t2-in", "+=.1");
 	tl.from(".t2a", { duration: duration, opacity: 0, y: '-=' + HEIGHT }, "t2-in");
 	tl.from(".t2b", { duration: duration, opacity: 0, y: '+=' + HEIGHT }, "t2-in");
 

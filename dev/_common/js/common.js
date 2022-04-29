@@ -5,11 +5,6 @@ gsap.defaults({
   ease: "power4.out"
 });
 
-const READ = {
-	t1: 2.5,
-	t1b: 2.5,
-	t2: 3
-}
 
 
 const {w, h} = size
